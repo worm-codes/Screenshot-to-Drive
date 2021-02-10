@@ -69,21 +69,54 @@
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
+	.glow {
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #09db44, 0 0 40px #09db44, 0 0 50px #09db44, 0 0 60px #09db44 0 0 70px #09db44;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px 
+#f29655, 0 0 40px 
+#f29655, 0 0 50px 
+#f29655, 0 0 60px 
+#f29655, 0 0 70px 
+#f29655, 0 0 80px 
+#f29655;
+  }
+}
+	
+	h1 {
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+}
 	
 
 </Style>
+
+
+
 <div class="container">
-	<div class="d-flex justify-content-center align-items-center">
+	<div  class="d-flex justify-content-center align-items-center">
 		
 		<h1>
-			SCREENSHOT  APP 
+			<b class="glow">SCREENSHOT  APP </b>
 		</h1>
 		
 	</div>
 	<div class="d-flex justify-content-center align-items-center">
 		
-		<h1>
-			Made by <a id="link" class="glow-on-hover" style="text-decoration : none; color:white; background:none;" target="_blank" href="https://www.linkedin.com/in/o%C4%9Fuzhan-%C3%A7evik-552820147/">Oğuzhan Çevik</a>
+		<h1 >
+			<b>Made by <a id="link"  style="text-decoration : none; color:white; background:none;" target="_blank" href="https://www.linkedin.com/in/o%C4%9Fuzhan-%C3%A7evik-552820147/">Oğuzhan Çevik</a></b>
 		</h1>
 		
 	</div>
@@ -104,16 +137,16 @@
 		
   </div>
 	<div class="d-flex justify-content-center align-items-center ">
-		<button href="/" class="btn btn-danger btn-lg " style="width:29%;">SEND REQUEST !</button>
+		<button href="/" class="btn btn-danger btn-lg  glow-on-hover" style="width:29%;">SEND REQUEST !</button>
 	</div>
 		
 </form>
 	<div class="d-flex justify-content-center align-items-center " style="margin-top:10%;">
-		<a href="https://drive.google.com/drive/folders/1ODtiMtdp2DBr-4bkbrSW37b1bN1i0JVz?usp=sharing" class="btn btn-success btn-lg" style="width:30%;" target="_blank">View Screenshots on Google Drive</a>
+		<a href="https://drive.google.com/drive/folders/1m3imEK9wP3R9R-15cDYE7isNbUv5JgIY?usp=sharing" class="btn btn-success btn-lg" style="width:30%;" target="_blank">View Screenshots on Google Drive</a>
 	</div>
 	
 	<div class="d-flex justify-content-center align-items-center mt-3">
-		<a href="https://drive.google.com/drive/u/0/folders/1ODtiMtdp2DBr-4bkbrSW37b1bN1i0JVz" class="btn  btn-lg" style="width:30%; background-color:#c9510c; color:white;" target="_blank">View Source Code on Github</a>
+		<a href="https://github.com/worm-codes/Screenshot-to-Drive" class="btn  btn-lg" style="width:30%; background-color:#c9510c; color:white;" target="_blank">View Source Code on Github</a>
 	</div>
 </div>
 
