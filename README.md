@@ -1,6 +1,6 @@
 # Screenshot-to-Drive
 
-# You Can Preview App  : https://screenshottodrive.herokuapp.com/
+#  https://screenshottodrive.herokuapp.com/
 # Installation:
 * npm install express -- save
 * npm install body-parser --save
