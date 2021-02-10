@@ -10,7 +10,7 @@
 # Files to Change:
 ### app.js 
 * customerKey
-* secretPhase
+* secretPhrase
 ## Google Drive API
 * credentials.json 
 * token.json
