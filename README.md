@@ -8,6 +8,9 @@
 * npm install npm install googleapis@39 --save
 
 # Files to Change:
+### app.js 
+* customerKey
+* secretPhase
 ## Google Drive API
 * credentials.json 
 * token.json
