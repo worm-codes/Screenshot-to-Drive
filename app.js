@@ -1,4 +1,4 @@
-//require---------------------------------------------------------
+
 var express=require("express");
 var app=express();
 const generateUniqueId = require('generate-unique-id');
@@ -10,6 +10,7 @@ const readline = require('readline');
 const { google } = require('googleapis');
  app.use(bodyparser.urlencoded({extended:true}));
 
+//object that we are gonnna use
 var webpage={
 	name:String,
 	url:String,
@@ -77,22 +78,26 @@ function getAccessToken(oAuth2Client, callback) {
 
 
 
-
+//main page
 app.get('/',function(req,res){
 	res.render('screenshot');
 })
+
+//All process
 app.post('/screenshot',function(req,res){
 	webpage.url=req.body.weburl;
 	webpage.name= req.body.webname;
 	
-	//=req.body.webname;
 	const id = generateUniqueId({
 		useNumbers:true,
 		useLetters:false,
 		length: 10,
 	});
 	webpage.id=id;
-	//---------------------
+	
+	
+	// App
+	
 	const Start = () => {
         fs.readFile('credentials.json', (err, content) => {
             if (err) return console.log('Error loading client secret file:', err);
@@ -106,9 +111,7 @@ app.post('/screenshot',function(req,res){
 
         
             options = {
-                //mandatory parameter
                 url: `${webpage.url}`,
-                // all next parameters are optional, see our website screenshot API doc for more details
                 dimension: '1920x1080',
                 device: 'desktop',
                 format: 'jpg',
@@ -147,29 +150,20 @@ app.post('/screenshot',function(req,res){
             }));
 
 
-        
-
-
     }
 
     Start();
 	
 	
-	
-	
-	//------------------------------------
-	
-	
-	
-	
 	res.redirect('/')
 	
 	
-})
+});
 
+var port=process.env.PORT ||3000 ; 
 
-app.listen(3000,function(){
-	console.log("The server has started");
+app.listen(port,function(){
+	console.log("The server has started !!!");
 });
 
 
