@@ -7,7 +7,7 @@
 * npm install generate-unique-id
 * npm install ejs --save
 * npm install screenshotmachine --save
-* npm install npm install googleapis@39 --save
+* npm install  googleapis@39 --save
 
 # Files to Change:
 ### app.js 
